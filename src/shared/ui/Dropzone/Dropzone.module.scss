@@ -1,0 +1,11 @@
+.Dropzone {
+  padding: var(--base-size-32);
+  border-radius: var(--border-radius-m);
+  border: 1px dashed var(--outline-color-variant);
+  transition: border-color, background-color, ease-in-out .1s;
+}
+
+.dragging {
+  border-color: var(--primary-color);
+  background-color: var(--outline-color-opacity-8);
+}

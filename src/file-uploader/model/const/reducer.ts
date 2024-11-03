@@ -1,0 +1,20 @@
+export enum FileUploaderStatus {
+    LOADED = 'LOADED',
+    INIT = 'INIT',
+    PENDING = 'PENDING',
+    UPLOADED = 'UPLOADED',
+    ERROR = 'ERROR',
+}
+
+export enum FileUploaderAction {
+    LOAD = 'LOAD',
+    SUBMIT = 'SUBMIT',
+    NEXT = 'NEXT',
+    REMOVE_FILE = 'REMOVE_FILE',
+    REMOVE_FILES = 'REMOVE_FILES',
+    FILE_UPLOADED = 'FILE_UPLOADED',
+    FILES_UPLOADED = 'FILES_UPLOADED',
+    UPDATE_UPLOADED_SIZE = 'UPDATE_UPLOADED_SIZE',
+    SET_ERROR = 'SET_ERROR',
+    RESET_ERROR = 'RESET_ERROR',
+}

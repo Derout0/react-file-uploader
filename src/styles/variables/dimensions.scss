@@ -1,0 +1,14 @@
+@use '../mixins/mixins' as *;
+
+:root {
+  @include setRem(--base-size-4, 4);
+  @include setRem(--base-size-8, 9);
+  @include setRem(--base-size-12, 12);
+  @include setRem(--base-size-16, 16);
+  @include setRem(--base-size-20, 20);
+  @include setRem(--base-size-24, 24);
+  @include setRem(--base-size-28, 28);
+  @include setRem(--base-size-32, 32);
+  @include setRem(--base-size-36, 36);
+  @include setRem(--base-size-40, 40);
+}

@@ -1,0 +1,48 @@
+:root {
+  // Button
+  --button-height-s: 30px;
+  --button-height-m: 36px;
+  --button-height-l: 42px;
+
+  // Icon Button
+  --icon-button-size-small: 2.5rem;
+  --icon-button-size-medium: 3.5rem;
+  --icon-button-size-large: 4.3125rem;
+
+  // Linear Progress
+  --linear-progress-size-x-small: 0.25rem;
+  --linear-progress-size-small: 0.5rem;
+  --linear-progress-size-medium: 0.75rem;
+  --linear-progress-size-large: 1rem;
+  --linear-progress-size-x-large: 1.25rem;
+
+  // Border
+  --base-border: 1px solid var(--outline-color);
+  --base-border-variant: 1px solid var(--outline-color-variant);
+  --base-border-error: 1px solid var(--error-color);
+
+  // Icon
+  --icon-size-small: 1.25rem;
+  --icon-size-medium: 1.5rem;
+  --icon-size-large: 1.75rem;
+
+  // Hamburger
+  --hamburger-width-size-s: 1.5rem;
+  --hamburger-height-size-s: 1rem;
+  --hamburger-width-size-m: 1.875rem;
+  --hamburger-height-size-m: 1.125rem;
+  --hamburger-width-size-l: 2.25rem;
+  --hamburger-height-size-l: 1.25rem;
+
+  // Border Radius
+  --border-radius-xs: 4px;
+  --border-radius-s: 8px;
+  --border-radius-m: 12px;
+  --border-radius-l: 16px;
+  --border-radius-xl: 28px;
+  --border-radius-full: 1000px;
+
+  // Sidebar
+  --sidebar-width: 18.75rem;
+  --sidebar-width-collapsed: 6.25rem;
+}

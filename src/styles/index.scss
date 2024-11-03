@@ -1,0 +1,32 @@
+@use 'fonts/fonts' as *;
+@use 'reset' as *;
+@use 'mixins/mixins' as *;
+@use 'variables/global' as *;
+@use 'variables/typography' as *;
+@use 'variables/dimensions' as *;
+@use 'themes/default' as *;
+
+#root {
+  height: 100%;
+}
+
+body {
+  color: var(--primary-color);
+  font-size: var(--font-size-body-large);
+  background: var(--surface-color);
+  font-family: var(--font-family-main), sans-serif;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: toRem(1740);
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.BaseFileUploader {
+  flex: 1 1 auto;
+}

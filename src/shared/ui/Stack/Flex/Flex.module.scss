@@ -1,0 +1,133 @@
+.Flex {
+  display: flex;
+
+  // Justify Content
+  &.justifyStart {
+    justify-content: start;
+  }
+
+  &.justifyCenter {
+    justify-content: center;
+  }
+
+  &.justifyEnd {
+    justify-content: end;
+  }
+
+  &.justifySpaceBetween {
+    justify-content: space-between;
+  }
+
+  &.justifySpaceEvenly {
+    justify-content: space-evenly;
+  }
+
+  // Align Items
+
+  &.alignStart {
+    align-items: start;
+  }
+
+  &.alignCenter {
+    align-items: center;
+  }
+
+  &.alignEnd {
+    align-items: end;
+  }
+
+  &.alignStretch {
+    align-items: stretch;
+  }
+
+  // Flex Direction
+
+  &.directionColumn {
+    flex-direction: column;
+  }
+
+  &.directionRow {
+    flex-direction: row;
+  }
+
+  // Gap
+
+  &.gap4 {
+    gap: var(--base-size-4);
+  }
+
+  &.gap8 {
+    gap: var(--base-size-8);
+  }
+
+  &.gap12 {
+    gap: var(--base-size-12);
+  }
+
+  &.gap16 {
+    gap: var(--base-size-16);
+  }
+
+  &.gap20 {
+    gap: var(--base-size-20);
+  }
+
+  &.gap24 {
+    gap: var(--base-size-24);
+  }
+
+  &.gap28 {
+    gap: var(--base-size-28);
+  }
+
+  &.gap32 {
+    gap: var(--base-size-32);
+  }
+
+  &.gap36 {
+    gap: var(--base-size-36);
+  }
+
+  &.gap40 {
+    gap: var(--base-size-40);
+  }
+
+  // Width
+
+  &.maxWidth {
+    width: 100%;
+  }
+
+  // Wrap
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
+
+  &.noWrap {
+    flex-wrap: nowrap;
+  }
+
+  &.wrapReverse {
+    flex-wrap: wrap-reverse;
+  }
+
+  &.inherit {
+    flex-wrap: inherit;
+  }
+
+  &.initial {
+    flex-wrap: initial;
+  }
+
+  &.revert {
+    flex-wrap: revert;
+  }
+
+  &.unset {
+    flex-wrap: unset;
+  }
+}
+
+
+

@@ -1,0 +1,49 @@
+.FileUploaderFileItem {
+  border: var(--base-border-variant);
+  border-radius: var(--border-radius-s);
+  padding: var(--base-size-8) var(--base-size-20);
+  background-color: var(--surface-container-color-lowest);
+  opacity: 0.8;
+  overflow: hidden;
+  transition: opacity .2s ease 0s;
+  position: relative;
+}
+
+.image {
+  width: 5rem;
+  height: 5rem;
+  flex: 0 0 5rem;
+  object-fit: contain;
+  object-position: center;
+}
+
+.progressbar {
+  position: absolute;
+  bottom: -0.25rem;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity, bottom, 0.3s ease 0s;
+}
+
+.uploadedInfo {
+  padding: var(--base-size-4) var(--base-size-8);
+  border-radius: var(--border-radius-l);
+  background-color: var(--tertiary-color);
+}
+
+.uploading {
+  .progressbar {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+.uploaded {
+  opacity: 1;
+
+  .uploadedInfo {
+    background-color: var(--primary-color);
+    color: var(--on-primary-color);
+  }
+}

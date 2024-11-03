@@ -1,0 +1,10 @@
+.FileUploaderError {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 37.5rem;
+  padding: var(--base-size-4) var(--base-size-8);
+  border-radius: var(--border-radius-m);
+  background-color: var(--error-color);
+}

@@ -1,0 +1,27 @@
+.BaseFileUploaderBody {
+  position: relative;
+}
+
+.dropzone {
+  border-radius: 0;
+  border-top: 0;
+  border-bottom: 0;
+  max-height: 30rem;
+  overflow-y: auto;
+}
+
+.loader {
+  position: absolute;
+  top: -0.25rem;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity, bottom, 0.3s ease 0s;
+}
+
+.uploading {
+  .loader {
+    top: 0;
+    opacity: 1;
+  }
+}

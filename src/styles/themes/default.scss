@@ -1,0 +1,159 @@
+:root {
+  // Поверхность.
+  --surface-color: #FEF7FF;
+  --surface-color-dim: #DED8E1;
+  --surface-color-bright: #FEF7FF;
+  --surface-container-color-low: #F7F2FA;
+  --surface-container-color-lowest: #FFF;
+  --surface-container-color: #F3EDF7;
+  --surface-container-color-high: #ECE6F0;
+  --surface-container-color-highest: #E6E0E9;
+
+  // Основные цвета над поверхностью.
+  --on-surface-color: #1D1B20;
+  --on-surface-color-opacity-8: rgb(29 27 32 / 8%);
+  --on-surface-color-opacity-12: rgb(29 27 32 / 12%);
+  --on-surface-color-variant: #49454F;
+  --on-surface-color-variant-opacity-4: rgb(73 69 79 / 4%);
+  --on-surface-color-variant-opacity-8: rgb(73 69 79 / 8%);
+  --on-surface-color-variant-opacity-12: rgb(73 69 79 / 12%);
+
+  // Основные цвета.
+  --primary-color: #6750A4;
+  --primary-color-hovered: #735EAB;
+  --primary-color-focused: #77699C;
+  --primary-color-pressed: #7965AF;
+  --primary-color-opacity-12: rgb(103 80 164 / 12%);
+  --on-primary-color: #FFF;
+  --primary-container-color: #EADDFF;
+  --primary-container-color-hovered: #DCCDF5;
+  --primary-container-color-opacity-12: rgb(232 221 255 / 12%);
+  --on-primary-container-color: #21005D;
+
+  // Вторичные цвета. (менее заметные компоненты)
+  --secondary-color: #625B71;
+  --secondary-color-hovered: #4E475C;
+  --on-secondary-color: #FFF;
+  --secondary-container-color: #E8DEF8;
+  --secondary-container-color-hovered: #E8DEF8;
+  --on-secondary-container-color: #1D192B;
+  --on-secondary-container-color-hovered: #D8CEE8;
+  --on-secondary-container-color-focused: #D0C6DF;
+  --on-secondary-container-color-pressed: #D0C6DF;
+
+  // Третичные цвета. (акцентный промежуток между 1-ым и 2-ым цветом)
+  --tertiary-color: #7D5260;
+  --on-tertiary-color: #FFF;
+  --tertiary-container-color: #FFD8E4;
+  --on-tertiary-container-color: #31111D;
+
+  // Фиксированные цвета. (не изменяются при смене темы)
+  --primary-fixed-color: #EADDFF;
+  --primary-fixed-color-dim: #EADDFF;
+  --on-primary-fixed-color: #21005D;
+  --on-primary-fixed-color-variant: #4F378B;
+  --secondary-fixed-color: #E8DEF8;
+  --secondary-fixed-color-dim: #CCC2DC;
+  --on-secondary-fixed-color: #1D192B;
+  --on-secondary-fixed-color-variant: #4A4458;
+  --tertiary-fixed-color: #FFD8E4;
+  --tertiary-fixed-color-dim: #EFB8C8;
+  --on-tertiary-fixed-color: #31111D;
+  --on-tertiary-fixed-color-variant: #633B48;
+
+  // Ошибки.
+  --error-color: #B3261E;
+  --error-color-opacity-12: rgb(179 38 30 / 12%);
+  --on-error-color: #FFF;
+  --error-container-color: #F9DEDC;
+  --error-container-color-opacity-12: rgb(249 222 220 / 12%);
+  --on-error-container-color: #410E0B;
+
+  // Контур.
+  --outline-color: #79747E;
+  --outline-color-opacity-8: rgb(121 116 126 / 8%);
+  --outline-color-opacity-12: rgb(121 116 126 / 12%);
+  --outline-color-opacity-16: rgb(121 116 126 / 12%);
+  --outline-color-variant: #CAC4D0;
+
+  // Инвертированные цвета.
+  --surface-color-inverse: #322F35;
+  --on-surface-color-inverse: #F5EFF7;
+
+  // Нейтральные
+  --neutral-color: #1D1B20;
+  --neutral-color-opacity-12: rgb(29 27 32 / 12%);
+  --neutral-color-opacity-38: rgb(29 27 32 / 38%);
+
+  // Disabled Color
+  --disabled-color: var(--neutral-color-opacity-12);
+  --on-disabled-color: var(--neutral-color-opacity-38);
+
+  // Тени (от 1 высоты до 5)
+  --base-shadow-1: 0 1px 3px 1px rgb(0 0 0 / 15%), 0 1px 2px 0 rgb(0 0 0 / 30%);
+  --base-shadow-2: 0 2px 6px 2px rgb(0 0 0 / 15%), 0 1px 2px 0 rgb(0 0 0 / 30%);
+  --base-shadow-3: 0 1px 3px 0 rgb(0 0 0 / 30%), 0 4px 8px 3px rgb(0 0 0 / 15%);
+  --base-shadow-4: 0 2px 3px 0 rgb(0 0 0 / 30%), 0 6px 10px 4px rgb(0 0 0 / 15%);
+  --base-shadow-5: 0 4px 4px 0 rgb(0 0 0 / 30%), 0 8px 12px 6px rgb(0 0 0 / 15%);
+
+  // Оверлей
+  --overlay-color: rgb(0 0 0 / 90%);
+
+  // Цвета компонентов (используют цвета выше)
+
+  // Navbar
+  --navbar-background-color: var(--surface-color);
+
+  // Sidebar
+  --sidebar-background-color: var(--surface-color);
+
+  // Icon Button
+  --standard-icon-button-color: var(--on-surface-color-variant);
+  --standard-icon-button-background-color: transparent;
+  --standard-icon-button-background-color-hovered: var(--on-surface-color-variant-opacity-8);
+  --standard-icon-button-background-color-focused: var(--on-surface-color-variant-opacity-8);
+  --standard-icon-button-background-color-pressed: var(--on-surface-color-variant-opacity-12);
+  --filled-icon-button-color: var(--surface-container-color-lowest);
+  --filled-icon-button-background-color: var(--primary-color);
+  --filled-icon-button-background-color-hovered: var(--primary-color-hovered);
+  --filled-icon-button-background-color-focused: var(--primary-color-focused);
+  --filled-icon-button-background-color-pressed: var(--primary-color-pressed);
+  --tonal-icon-button-color: var(--on-secondary-container-color);
+  --tonal-icon-button-background-color: var(--secondary-container-color);
+  --tonal-icon-button-background-color-hovered: var(--on-secondary-container-color-hovered);
+  --tonal-icon-button-background-color-focused: var(--on-secondary-container-color-focused);
+  --tonal-icon-button-background-color-pressed: var(--on-secondary-container-color-pressed);
+  --outlined-icon-button-color: var(--on-surface-color-variant);
+  --outlined-icon-button-background-color: transparent;
+  --outlined-icon-button-background-color-hovered: var(--outline-color-opacity-8);
+  --outlined-icon-button-background-color-focused: var(--outline-color-opacity-8);
+  --outlined-icon-button-background-color-pressed: var(--outline-color-opacity-16);
+  --outlined-icon-button-border-color: var(--outline-color-variant);
+
+  // Input
+  --filled-input-background-color: var(--surface-container-color-highest);
+  --filled-input-text-color: var(--on-surface-color);
+  --filled-input-label-color: var(--on-surface-color-variant);
+  --filled-input-border-color: var(--on-surface-color);
+  --border-input-background-color: transparent;
+  --border-input-text-color: var(--on-surface-color);
+  --border-input-label-color: var(--on-surface-color-variant);
+  --border-input-border-color: var(--outline-color-variant);
+
+  // Input - focus
+  --filled-input-label-color-focus: var(--primary-color);
+  --filled-input-border-color-focus: var(--primary-color);
+  --border-input-border-color-focus: var(--primary-color);
+
+  // Input - hover
+  --filled-input-background-color-hovered: #D6D0D9;
+
+  // Tabs
+  --primary-tabs-divider-color: var(--primary-color);
+  --primary-tabs-text-color: var(--on-surface-color-variant);
+  --primary-tabs-border-color: var(--surface-container-color-highest);
+
+  // Tabs - hover
+  --primary-tabs-background-color-hovered: var(--surface-container-color);
+  --primary-tabs-text-color-selected: var(--primary-color);
+}

@@ -1,0 +1,114 @@
+.IconButton.IconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0;
+  border-radius: 50%;
+  width: var(--icon-button-size-small);
+  height: var(--icon-button-size-small);
+  flex-basis: var(--icon-button-size-small);
+  transition: background-color .2s ease 0s;
+
+  // Themes
+  &.standard {
+    background-color: var(--standard-icon-button-background-color);
+    svg {stroke: var(--standard-icon-button-color)};
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--standard-icon-button-background-color-hovered);
+      }
+    }
+
+    &:focus {
+      background-color: var(--standard-icon-button-background-color-focused);
+    }
+
+    &:active {
+      background-color: var(--standard-icon-button-background-color-pressed);
+    }
+  }
+
+  &.filled {
+    background-color: var(--filled-icon-button-background-color);
+    svg {stroke: var(--filled-icon-button-color)};
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--filled-icon-button-background-color-hovered);
+      }
+    }
+
+    &:focus {
+      background-color: var(--filled-icon-button-background-color-focused);
+    }
+
+    &:active {
+      background-color: var(--filled-icon-button-background-color-pressed);
+    }
+  }
+
+  &.tonal {
+    background-color: var(--tonal-icon-button-background-color);
+    svg {stroke: var(--tonal-icon-button-color)};
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--tonal-icon-button-background-color-hovered);
+      }
+    }
+
+    &:focus {
+      background-color: var(--tonal-icon-button-background-color-focused);
+    }
+
+    &:active {
+      background-color: var(--tonal-icon-button-background-color-pressed);
+    }
+  }
+
+  &.outlined {
+    background-color: var(--outlined-icon-button-background-color);
+    border: 1px solid var(--outlined-icon-button-border-color);
+    svg {stroke: var(--outlined-icon-button-color)};
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--outlined-icon-button-background-color-hovered);
+      }
+    }
+
+    &:focus {
+      background-color: var(--outlined-icon-button-background-color-focused);
+    }
+
+    &:active {
+      background-color: var(--outlined-icon-button-background-color-pressed);
+    }
+  }
+
+  // Sizes
+  &.small {
+    width: var(--icon-button-size-small);
+    height: var(--icon-button-size-small);
+    flex-basis: var(--icon-button-size-small);
+  }
+
+  &.medium {
+    width: var(--icon-button-size-medium);
+    height: var(--icon-button-size-medium);
+    flex-basis: var(--icon-button-size-medium);
+  }
+
+  &.large {
+    width: var(--icon-button-size-large);
+    height: var(--icon-button-size-large);
+    flex-basis: var(--icon-button-size-large);
+  }
+}
+
+.disabled {
+  user-select: none;
+  pointer-events: none;
+  opacity: 0.7;
+}

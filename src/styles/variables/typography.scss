@@ -1,0 +1,33 @@
+@use '../mixins/mixins' as *;
+
+:root {
+  --font-family-main: 'Montserrat', 'sans-serif';
+
+  @include setRem(--font-size-display-large, 57);
+  @include setRem(--font-size-display-medium, 45);
+  @include setRem(--font-size-display-small, 36);
+  @include setRem(--font-size-headline-large, 32);
+  @include setRem(--font-size-headline-medium, 28);
+  @include setRem(--font-size-headline-small, 24);
+  @include setRem(--font-size-title-large, 22);
+  @include setRem(--font-size-title-medium, 18);
+  @include setRem(--font-size-title-small, 14);
+  @include setRem(--font-size-label-large, 14);
+  @include setRem(--font-size-label-medium, 12);
+  @include setRem(--font-size-label-small, 11);
+  @include setRem(--font-size-body-large, 16);
+  @include setRem(--font-size-body-medium, 14);
+  @include setRem(--font-size-body-small, 12);
+
+  --text-line-height-100: 1;
+  --text-line-height-110: 1.1;
+  --text-line-height-120: 1.2;
+  --text-line-height-125: 1.25;
+  --text-line-height-130: 1.3;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+}
