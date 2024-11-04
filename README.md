@@ -95,10 +95,10 @@ function MyComponent() {
 <FileUploader.UploadButton>  
   {({ inputRef, onChange, onUploadButtonClick }) => (  
         <div className='my-custom-block'>  
-			 <input ref={inputRef} type="file" accept="image/*" onChange={onChange} />  
-			 <button type='button' onClick={onUploadButtonClick}>Upload</button>  
-		 </div>  
-	)}  
+		<input ref={inputRef} type="file" accept="image/*" onChange={onChange} />  
+		<button type='button' onClick={onUploadButtonClick}>Upload</button>  
+	</div>  
+  )}  
 </FileUploader.UploadButton>
 ```
 
