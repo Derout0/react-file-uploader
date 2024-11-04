@@ -7,7 +7,7 @@ export const BaseFileUploaderHeader = () => {
         <HStack className={cls.BaseFileUploaderHeader} gap="20" align="center">
             <HStack gap="20" align="center">
                 <HStack gap="20" align="center">
-                    <FileUploader.UploadButton />
+                    <FileUploader.UploadButton  />
                     <FileUploader.ResetButton />
                 </HStack>
                 <FileUploader.Status visibility="always" />
