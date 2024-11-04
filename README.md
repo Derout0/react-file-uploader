@@ -130,14 +130,14 @@ function MyComponent() {
 			<HStack flex="0 0 20rem">  
 				<FileUploader.Progressbar>  
 					{({uploadedSize, maxTotalSize}) => {  
-                        return (  
-                            <div className='custom-progressbar'>  
+                        			return (  
+                            				<div className='custom-progressbar'>  
 								<div>{`Uploaded Size: ${uploadedSize}`}</div>  
 								<div>{`Max Total Size: ${maxTotalSize}`}</div>  
-							</div>  
+			     				</div>  
 						)  
-                    }}  
-                </FileUploader.Progressbar>  
+					}}  
+				</FileUploader.Progressbar>  
 			</HStack>
 		</HStack> 
 	</HStack> 
@@ -148,13 +148,13 @@ function MyComponent() {
 			<FileUploader.FileList>  
 				{({ files }) => {  
 					const filesArray = files?.map((file) => (  
-			            <div>{file.file.name}</div>  
-		            ))  
+			            		<div>{file.file.name}</div>  
+		            		))  
 	            
-		            return (  
-		                <div>  
-			                {filesArray}  
-	                    </div>  
+		            		return (  
+		                		<div>  
+			                		{filesArray}  
+	                    			</div>  
 					)  
 				}}  
 			</FileUploader.FileList>  
