@@ -2,27 +2,27 @@
 
 # FileUploader Component
 
-`FileUploader` — настраиваемый и кастомизируемый компонент для загрузки файлов в React. Компонент организован с помощью провайдеров контекста и пользовательских хуков, которые управляют состоянием, предоставляют доступ к параметрам и функциям
+`FileUploader` is a customizable and customizable component for uploading files to React. The component is organized with context providers and custom hooks that control state, provide access to parameters and functions
 
 <p align="center">
   <img src="./media/file-uploader-gif.gif">
 </p>
 
-## Основные возможности
+## Main features
 
--   **Полная кастомизация**: каждый встроенный подкомпонент может быть использован как стандартный элемент, кастомизирован с помощью пользовательского компонента или функции рендеринга.
-- **Расширенные настройки**: поддержка распространенных параметров (лимиты на размер и количество файлов, фильтрация по MIME-типам и т.д)
+- **Full customization**: each built-in subcomponent can be used as a standard element, customized with a custom component or rendering function.
+- **Advanced customization**: support for common settings (file size and number limits, MIME type filtering, etc.)
 
-## Использование
+## Usage
 
-Импортировать и использовать `FileUploader`:
+Import and use `FileUploader`:
 
 ```typescript
 import { FileUploader } from 'your-file-uploader-package';
 
 function MyComponent() {
   const handleFileUpload = async (file: File) => {
-    // Логика загрузки файла
+    // File upload logic
   };
 
   return (
@@ -31,12 +31,12 @@ function MyComponent() {
       options={{
         multiple: true,
         allowedFileTypes: ['image/png', 'image/jpeg'],
-        maxFiles: 5, // Максимальное кол-во файлов для загрузки
-        maxFileSize: 10, // Максимальный размер одного файла (в МБ)
-        maxTotalSize: 50 // Общий лимит на все файлы (в МБ)
+        maxFiles: 5, // Maximum number of files to upload
+	maxFileSize: 10, // Maximum size of one file (in MB)
+	maxTotalSize: 50 // Total limit for all files (in MB)
       }}
     >
-      /* Компоненты управления и отображения для загрузчика */
+      /* Control and display components for the loader */
       <FileUploader.UploadButton />
       <FileUploader.Dropzone />
       <FileUploader.FileList />
@@ -47,50 +47,50 @@ function MyComponent() {
 }
 ```
 
-## Свойства для `<FileUploader />`
+## Properties for `<FileUploader />`
 
-| Свойство  | Тип                          | Описание                                          |
+| Property  | Type                         | Description                                       |
 |-----------|------------------------------|---------------------------------------------------|
-| className | string                       | Кастомный класс для стилизации компонента         |
-| api       | (file: File) => Promise<any> | Асинхронная функция для обработки загрузки файлов |
-| options   | object                       | Настройки загрузчика                              |
+| className | string                       | Custom class for component styling                |
+| api       | (file: File) => Promise<any> | Asynchronous function for file upload processing  |
+| options   | object                       | Bootloader settings                               |
 
-### Опции (параметр `options`)
+### Options (parameter `options`)
 
-| Свойство         | Тип         | Описание                                                                                                                                                   |
-|------------------|-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| multiple         | boolean     | Разрешает загрузку нескольких файлов через input (не влияет на maxFiles)                                                                                   |
-| allowedFileTypes | MimeTypes[] | Массив MIME-типов для фильтрации допустимых файлов                                                                                                         |
-| maxFiles         | number      | Максимальное количество файлов для загрузки                                                                                                                |
-| minFiles         | number      | Минимальное количество файлов для загрузки                                                                                                                 |
-| maxFileSize      | number      | Максимальный размер одного файла в мегабайтах                                                                                                              |
-| maxTotalSize     | number      | Максимальный общий размер всех загружаемых файлов в мегабайтах (по умолчанию рассчитывается максимально возможный размер на основе maxFiles и maxFileSize) |
+| Property         | Type        | Description                                                                                                                                                                         |
+|------------------|-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| multiple         | boolean     | Allows loading multiple files via input (does not affect maxFiles)                                                                                                                  |
+| allowedFileTypes | MimeTypes[] | Array of MIME types for filtering valid files                                                                                                                                       |
+| maxFiles         | number      | Maximum number of files to upload Minimum number of files to upload                                                                                                                 |
+| minFiles         | number      | Minimum number of files to upload                                                                                                                                                   |
+| maxFileSize      | number      | Maximum size of one file in megabytes                                                                                                                                               |
+| maxTotalSize     | number      | Maximum size of one file in megabytes Maximum total size of all uploaded files in megabytes (by default, the maximum possible size is calculated based on maxFiles and maxFileSize) |
 
-## Встроенные подкомпоненты
-`FileUploader` включает несколько встроенных компонентов для управления процессом загрузки и интерфейсом, с возможностью кастомизации:
--   **`FileUploader.UploadButton`**: кнопка для выбора файлов.
--   **`FileUploader.Dropzone`**: область для перетаскивания файлов, активируется при переносе файла на компонент.
--   **`FileUploader.FileList`**: отображает список загруженных файлов.
--   **`FileUploader.FileItem`**: компонент для отображения информации о загруженном файле (используется внутри FileList).
--   **`FileUploader.Progressbar`**: отображает информацию о количестве месте (МБ) передаваемых файлов.
--   **`FileUploader.Status`**: компонент для отображения статуса загрузки (например, количества оставшихся файлов).
--   **`FileUploader.ResetButton`**: кнопка для сброса загруженных файлов.
--   **`FileUploader.SubmitButton`**: кнопка для отправки файлов на сервер.
--   **`FileUploader.Error`**: отображает сообщения об ошибках, например, при превышении лимита размера.
+## Built-in subcomponents
+`FileUploader` includes several built-in components for controlling the upload process and interface, with the possibility of customization:
+- **`FileUploader.UploadButton`**: button for selecting files.
+- **`FileUploader.Dropzone`**: area for dragging and dropping files, activated when a file is moved to the component.
+- **`FileUploader.FileList`**: displays a list of uploaded files.
+- **`FileUploader.FileItem`**: component to display information about the uploaded file (used inside FileList).
+- **`FileUploader.Progressbar`**: displays information about the amount of space (MB) of transferred files.
+- **`FileUploader.Status`**: component to display the status of the upload (e.g. number of files remaining).
+- **`FileUploader.ResetButton`**: a button to reset uploaded files.
+- **`FileUploader.SubmitButton`**: button to submit files to the server.
+- **`FileUploader.Error`**: displays error messages, e.g. when the size limit is exceeded.
 
-### Интерфейс подкомпонентов.
-Каждый из подкомпонентов можно использовать как стандартный компонент:
+### Subcomponent Interface.
+Each of the subcomponents can be used as a standard component:
 ``` typescript
 <FileUploader.UploadButton className='my-upload-button' />
 ```
 
-Или передавать свой кастомный элемент для отображения:
+Or pass your custom element to display:
 ``` typescript
 <FileUploader.UploadButton>  
 	<MyCustomButton theme='filled' color='primary'>Upload</MyCustomButton>  
 </FileUploader.UploadButton>
 ```
-Или как функцию с пользовательским рендерингом:
+Or as a function with custom rendering:
 ```typescript
 <FileUploader.UploadButton>  
   {({ inputRef, onChange, onUploadButtonClick }) => (  
@@ -102,14 +102,12 @@ function MyComponent() {
 </FileUploader.UploadButton>
 ```
 
-Это позволяет гибко настраивать отображение необходимого интерфейса.
-
-## Пример построения компонента
+## Example of component construction
 
 ```typescript
 <div className={cls.ExampleComponent}>  
 
-	{/* Заголовок с кнопками загрузки, сброса и статусом загрузки */}
+	{/* Header with download, reset and download status buttons */}
 	<HStack className={cls.BaseFileUploaderHeader} gap="20" align="center">  
 		<HStack gap="20" align="center">  
 			<HStack gap="20" align="center">  
@@ -142,7 +140,7 @@ function MyComponent() {
 		</HStack> 
 	</HStack> 
 	
-	{/* Основной контент с зоной перетаскивания и списком файлов */}
+	{/* Main content with drag and drop zone and file list */}
 	<HStack className={cls.BaseFileUploaderBody}>  
 		<FileUploader.Dropzone className={cls.dropzone}>  
 			<FileUploader.FileList>  
@@ -163,7 +161,7 @@ function MyComponent() {
 		<LinearProgress className={cls.loader}/>  
 	</HStack> 
 	
-	{/* Нижняя часть с кнопкой отправки */}
+	{/* Bottom part with submit button */}
 	<HStack className={cls.BaseFileUploaderFooter} gap="20" justify="center" align="center">  
 		<FileUploader.SubmitButton /> 
 	</HStack>
