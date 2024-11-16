@@ -26,7 +26,7 @@ export const FileUploaderDropzone = (props: FileUploaderDropzoneProps) => {
 
     return (
         <FileUploaderBaseComponent
-            props={{ allowedFileTypes, onDrop }}
+            functionalProps={{ allowedFileTypes, onDrop }}
             wrapper={content => (
                 <Dropzone
                     className={className}

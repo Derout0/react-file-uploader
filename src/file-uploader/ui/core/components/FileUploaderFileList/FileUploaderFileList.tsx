@@ -1,4 +1,4 @@
-import type { ReactElement, ReactNode } from 'react'
+import type { ReactElement } from 'react'
 
 import { VStack } from '@/shared/ui/Stack'
 
@@ -9,7 +9,7 @@ import { FileUploaderBaseComponent } from '../FileUploaderBaseComponent/FileUplo
 
 interface FileUploaderFilesProps {
     className?: string
-    children?: ReactNode | ((props: {
+    children?: ((props: {
         files: FileItem[] | undefined
     }) => ReactElement)
 }
@@ -27,7 +27,7 @@ export const FileUploaderFileList = (props: FileUploaderFilesProps) => {
     )
 
     return (
-        <FileUploaderBaseComponent props={{ files }} component={defaultComponent}>
+        <FileUploaderBaseComponent functionalProps={{ files }} component={defaultComponent}>
             {children}
         </FileUploaderBaseComponent>
     )

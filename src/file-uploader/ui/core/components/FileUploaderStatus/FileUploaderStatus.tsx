@@ -1,4 +1,4 @@
-import type { ReactElement, ReactNode } from 'react'
+import type { ReactElement } from 'react'
 
 import { Text } from '@/shared/ui/Text/Text'
 
@@ -13,7 +13,7 @@ interface FileUploaderStatusProps {
         totalText?: string
         successText?: string
     }
-    children?: ReactNode | ((props: {
+    children?: ((props: {
         total: number
         remaining: number
         status: FileUploaderStatus | null
@@ -51,7 +51,7 @@ export const FileUploaderStatusInformation = (props: FileUploaderStatusProps) =>
     )
 
     return (
-        <FileUploaderBaseComponent props={{ total, remaining, status }} component={defaultComponent}>
+        <FileUploaderBaseComponent functionalProps={{ total, remaining, status }} component={defaultComponent}>
             {children}
         </FileUploaderBaseComponent>
     )

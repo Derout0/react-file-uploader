@@ -1,5 +1,5 @@
 import * as cls from './FileUploaderError.module.scss'
-import type { ReactElement, ReactNode } from 'react'
+import type { ReactElement } from 'react'
 
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { Text } from '@/shared/ui/Text/Text'
@@ -9,7 +9,7 @@ import { FileUploaderBaseComponent } from '../FileUploaderBaseComponent/FileUplo
 
 interface FileUploaderErrorProps {
     className?: string
-    children?: ReactNode | ((props: {
+    children?: ((props: {
         error: string | undefined
     }) => ReactElement)
 }
@@ -23,7 +23,10 @@ export const FileUploaderError = (props: FileUploaderErrorProps) => {
     )
 
     return (
-        <FileUploaderBaseComponent props={{ error }} component={defaultComponent}>
+        <FileUploaderBaseComponent
+            functionalProps={{ error }}
+            component={defaultComponent}
+        >
             {children}
         </FileUploaderBaseComponent>
     )

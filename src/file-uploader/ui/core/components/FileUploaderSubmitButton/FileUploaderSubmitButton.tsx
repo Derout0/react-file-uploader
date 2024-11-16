@@ -22,7 +22,10 @@ export const FileUploaderSubmitButton = (props: FileUploaderSubmitButtonProps) =
 
     return (
         <FileUploaderBaseComponent
-            props={{ onSubmit }}
+            functionalProps={{ onSubmit }}
+            componentProps={{
+                onClick: onSubmit,
+            }}
             component={defaultComponent}
         >
             {children}

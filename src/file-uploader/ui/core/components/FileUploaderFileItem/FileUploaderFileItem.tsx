@@ -99,7 +99,7 @@ export const FileUploaderFileItem = (props: FileUploaderFileItemProps) => {
 
     return (
         <FileUploaderBaseComponent
-            props={{
+            functionalProps={{
                 isFileUploaded: isUploaded,
                 isFileUploading: isUploading,
                 onRemoveFile: onRemove,

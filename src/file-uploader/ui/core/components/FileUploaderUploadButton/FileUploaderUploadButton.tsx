@@ -34,7 +34,10 @@ export const FileUploaderUploadButton = (props: FileUploaderUploadButtonProps) =
 
     return (
         <FileUploaderBaseComponent
-            props={{ onChange, onUploadButtonClick, inputRef, allowedFileTypes }}
+            functionalProps={{ onChange, onUploadButtonClick, inputRef, allowedFileTypes }}
+            componentProps={{
+                onClick: onUploadButtonClick,
+            }}
             component={defaultComponent}
             wrapper={content => (
                 <UploadButton

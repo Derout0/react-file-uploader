@@ -1,4 +1,4 @@
-import type { ReactElement, ReactNode } from 'react'
+import type { ReactElement } from 'react'
 
 import type { LinearProgressSize } from '@/shared/ui/Progressbar/LinearProgress/LinearProgress'
 import { LinearProgress } from '@/shared/ui/Progressbar/LinearProgress/LinearProgress'
@@ -8,7 +8,7 @@ import { FileUploaderBaseComponent } from '../FileUploaderBaseComponent/FileUplo
 
 interface FileUploaderProgressbarProps {
     className?: string
-    children?: ReactNode | ((props: {
+    children?: ((props: {
         uploadedSize: number
         maxTotalSize: number
     }) => ReactElement)
@@ -39,7 +39,7 @@ export const FileUploaderProgressbar = (props: FileUploaderProgressbarProps) => 
     )
 
     return (
-        <FileUploaderBaseComponent props={{ uploadedSize, maxTotalSize }} component={defaultComponent}>
+        <FileUploaderBaseComponent functionalProps={{ uploadedSize, maxTotalSize }} component={defaultComponent}>
             {children}
         </FileUploaderBaseComponent>
     )

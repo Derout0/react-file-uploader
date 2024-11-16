@@ -1,4 +1,4 @@
-import type { ReactElement, ReactNode } from 'react'
+import type { ReactElement } from 'react'
 
 import { Text } from '@/shared/ui/Text/Text'
 
@@ -10,7 +10,7 @@ interface FileUploaderDetailsProps {
         wrapper?: string
         currentValue?: string
     }
-    children?: ReactNode | ((props: {
+    children?: ((props: {
         maxFileSize: number
         minFiles: number
         maxFiles: number
@@ -45,7 +45,7 @@ export const FileUploaderDetails = (props: FileUploaderDetailsProps) => {
     }
 
     return (
-        <FileUploaderBaseComponent props={{ maxFiles, minFiles, maxFileSize, maxTotalSize, allowedFileTypes }} component={defaultComponent}>
+        <FileUploaderBaseComponent functionalProps={{ maxFiles, minFiles, maxFileSize, maxTotalSize, allowedFileTypes }} component={defaultComponent}>
             {children}
         </FileUploaderBaseComponent>
     )

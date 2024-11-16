@@ -9,7 +9,7 @@ import { FileUploaderBaseComponent } from '../FileUploaderBaseComponent/FileUplo
 
 interface FileUploaderResetButtonProps {
     className?: string
-    children?: ((props: { onRemoveFiles: () => void }) => ReactElement) | ReactNode
+    children?: ReactNode | ((props: { onRemoveFiles: () => void }) => ReactElement)
 }
 
 export const FileUploaderResetButton = (props: FileUploaderResetButtonProps) => {
@@ -23,7 +23,7 @@ export const FileUploaderResetButton = (props: FileUploaderResetButtonProps) => 
     )
 
     return (
-        <FileUploaderBaseComponent props={{ onRemoveFiles }} component={defaultComponent}>
+        <FileUploaderBaseComponent functionalProps={{ onRemoveFiles }} component={defaultComponent}>
             {children}
         </FileUploaderBaseComponent>
     )
